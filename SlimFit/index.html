@@ -9,7 +9,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="https://api.iconify.design/lucide:activity.svg?color=%2310B981&width=192&height=192">
     <title>SlimFit</title>
-    <!-- 使用 CDN 快速加载样式和 MQTT 库，兼容性最好 -->
+    <!-- 使用 CDN 快速加载样式和 MQTT 库 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script>
@@ -24,10 +24,10 @@
                 700: '#27272a', // Zinc 800
               },
               mint: {
-                400: '#34d399', // Emerald 400 (Bright for dark mode)
+                400: '#34d399', // Emerald 400
                 500: '#10B981', // Emerald 500
                 600: '#059669',
-                900: '#064e3b', // Deep green bg
+                900: '#064e3b',
               },
               coral: {
                 400: '#f87171',
@@ -64,43 +64,25 @@
     </script>
     <style>
       body {
-        background-color: #09090b; /* Zinc 950 */
-        color: #f4f4f5; /* Zinc 100 */
+        background-color: #09090b;
+        color: #f4f4f5;
         -webkit-tap-highlight-color: transparent;
-        padding-bottom: env(safe-area-inset-bottom); /* iOS Safe Area */
+        padding-bottom: env(safe-area-inset-bottom);
       }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 4px;
-        height: 4px;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #3f3f46;
-        border-radius: 2px;
-      }
-      /* Confetti Animation */
+      ::-webkit-scrollbar { width: 4px; height: 4px; }
+      ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 2px; }
       @keyframes confetti-fall {
         0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
         100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
       }
       .confetti-piece {
-        position: fixed;
-        width: 8px;
-        height: 8px;
-        background-color: #ffd700;
-        top: -10px;
-        z-index: 9999;
-        pointer-events: none;
-        animation: confetti-fall 3s linear forwards;
+        position: fixed; width: 8px; height: 8px; background-color: #ffd700; top: -10px; z-index: 9999; pointer-events: none; animation: confetti-fall 3s linear forwards;
       }
       .glass-card {
-        background: rgba(24, 24, 27, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(24, 24, 27, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08);
       }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
@@ -117,8 +99,7 @@
 </head>
   <body>
     <div id="root"></div>
-    <!-- 关键修复：添加 Vite 入口文件 -->
-    <script type="module" src="/src/index.tsx"></script>
+    <script type="module" src="./src/index.tsx"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
