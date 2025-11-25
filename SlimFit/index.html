@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN" class="dark">
   <head>
@@ -10,6 +9,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="https://api.iconify.design/lucide:activity.svg?color=%2310B981&width=192&height=192">
     <title>SlimFit</title>
+    <!-- 使用 CDN 快速加载样式和 MQTT 库，兼容性最好 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script>
@@ -103,13 +103,13 @@
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
     "recharts": "https://aistudiocdn.com/recharts@^3.5.0",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
-    "vite": "https://aistudiocdn.com/vite@^7.2.4"
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
@@ -117,6 +117,8 @@
 </head>
   <body>
     <div id="root"></div>
+    <!-- 关键修复：添加 Vite 入口文件 -->
+    <script type="module" src="/src/index.tsx"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
