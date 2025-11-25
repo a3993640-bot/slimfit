@@ -1,0 +1,7 @@
+{
+  "name": "SlimFit",
+  "description": "一款极简、游戏化的减肥打卡应用，具备社交功能和路线规划。",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

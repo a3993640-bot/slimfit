@@ -1,0 +1,21 @@
+
+{
+  "short_name": "SlimFit",
+  "name": "SlimFit 减肥小分队",
+  "icons": [
+    {
+      "src": "https://api.iconify.design/lucide:activity.svg?color=%2310B981&width=192&height=192",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "https://api.iconify.design/lucide:activity.svg?color=%2310B981&width=512&height=512",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#09090b",
+  "background_color": "#09090b"
+}
